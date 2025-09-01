@@ -1,0 +1,485 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #232526, #414345);
+    font-family: Arial, sans-serif;
+    color: #fff;
+    padding: 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Optional: Animated Background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('download.gif') center/cover no-repeat;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+/* Form Container */
+form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    z-index: 1;
+    margin: 30px;
+}
+
+/* Form Inputs */
+form input[type="text"],
+form input[type="password"],
+form select,
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    background-color: #007BFF;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Cancel Link */
+form a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+form a:hover {
+    color: #ff1a1a;
+}
+
+/* --- LOGIN PAGE --- */
+
+/* Login Page Styling */
+.login-body {
+    background: linear-gradient(135deg, #232526, #414345);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dynamic Background for Login Page */
+.login-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('download.gif') center/cover no-repeat;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Login Form Styling */
+.login-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+    margin: 0px;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Password Visibility Wrapper */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input[type="password"] {
+    width: 100%;
+    padding-right: 40px;
+}
+
+#eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ccc;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 30px 0 15px;
+    color: #ccc;
+    text-align: center;
+}
+
+label {
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/* --- DASHBOARD PAGE --- */
+
+/* Centered Dashboard Layout */
+.dashboard-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  min-height: 100vh;
+  position: relative;
+}
+
+
+.dashboard-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('download.gif') center/cover no-repeat;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.dashboard-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Dashboard Headings */
+.dashboard-content h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.dashboard-content h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Dashboard Buttons */
+.dashboard-buttons {
+    margin-bottom: 30px;
+}
+
+.dashboard-buttons button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dashboard-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Logout Link */
+.logout-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.logout-link:hover {
+    color: #ff1a1a;
+}
+
+/* --- ACCOUNTS MANAGEMENT PAGE --- */
+
+/* Links */
+.create-account-link,
+.back-link {
+    display: inline-block;
+    margin: 10px;
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.create-account-link:hover,
+.back-link:hover {
+    color: #00aaff;
+}
+
+/* Equipment Table Styling */
+.account-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Table Headers and Cells */
+.account-table th,
+.account-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+}
+
+/* Table Header Styling */
+.account-table th {
+    background-color: #333;
+    font-weight: bold;
+}
+
+/* Table Row Hover Effect */
+.account-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Action Links */
+.edit-link,
+.delete-link {
+    margin: 0 5px;
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.edit-link:hover,
+.delete-link:hover {
+    color: #00aaff;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #2c2c2c;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-content button:first-of-type {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.modal-content button:last-of-type {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: darkred;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  font-size: 16px;
+  resize: vertical;
+}
+
+/* Button Styling */
+.delete-button {
+    background-color: #dc3545;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 30px;
+    width: auto;
+    max-width: 300px;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    background: #dc3545;
+}
+
+/* Remove Gray Background When Focused */
+.delete-button:focus {
+    outline: none;
+}
+
+/* Button Hover Effect */
+.delete-button:hover {
+    background-color: #b02a37;
+}
+
+/* Button Wrapper */
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 15px;
+}
+
+.table-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Custom Starry Background */
+.custom-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.custom-circle-container {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.8;
+    animation: blink 1.5s infinite ease-in-out, float-up 10s ease-in-out infinite;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+/* Twinkling Stars Effect */
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Stars floating upwards */
+@keyframes float-up {
+    0% { 
+        transform: translateY(0);
+    }
+    100% { 
+        transform: translateY(-120vh);
+    }
+}
