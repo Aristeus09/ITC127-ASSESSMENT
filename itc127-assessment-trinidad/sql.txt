@@ -1,0 +1,40 @@
+CREATE TABLE `tblaccounts` (
+    `username` VARCHAR(50) PRIMARY KEY,
+    `password` VARCHAR(50),
+    `usertype` ENUM('Administrator', 'Technical', 'User'),
+    `status` ENUM('Active','Inactive') DEFAULT 'Active',
+    `createdby` varchar(50),
+    `datecreated` varchar(50)
+);
+
+CREATE TABLE `tblaccountslogs` (
+  `datelog` varchar(20) NOT NULL,
+  `timelog` varchar(20) NOT NULL,
+  `module` varchar(20) NOT NULL,
+  `action` varchar(20) NOT NULL,
+  `performedto` varchar(50) NOT NULL,
+  `performedby` varchar(50) NOT NULL
+);
+
+CREATE TABLE tblequipments (
+    assetnumber varchar(50) PRIMARY KEY,
+    serialnumber varchar(50) UNIQUE,
+    type ENUM('Monitor', 'CPU', 'Keyboard', 'Mouse', 'AVR', 'MAC', 'Printer', 'Projector'),
+    manufacturer VARCHAR(100),
+    yearmodel VARCHAR(4),
+    description TEXT,
+    branch ENUM('AU Main Campus', 'AU Pasay', 'AU Mandaluyong', 'AU Malabon', 'AU Pasig'),
+    department VARCHAR(100),
+    status ENUM('Working', 'On-Repair', 'Retired') DEFAULT 'Working',
+    createdby VARCHAR(50),
+    datecreated VARCHAR(50)
+);
+
+CREATE TABLE `tblequipmentslogs (
+    datelog varchar(20),
+    timelog varchar(20),
+    assetnumber varchar(50),
+    performedby varchar(20),
+    action varchar(20),
+    module varchar(20)
+);
