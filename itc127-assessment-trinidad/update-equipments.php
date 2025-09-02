@@ -120,7 +120,7 @@ if (isset($_POST['btnupdate'])) {
                             // Log the update action in the equipment logs
                             $log_sql = "INSERT INTO tblequipmentslogs (datelog, timelog, assetnumber, performedby, action, module) VALUES (?, ?, ?, ?, ?, ?)";
                             if ($log_stmt = mysqli_prepare($link, $log_sql)) {
-                                $datelog = date('d/M/Y');
+                                $datelog = date('d/m/Y');
                                 $timelog = date('h:i:sa');
                                 $action = "Update";
                                 $module = "Equipments";

@@ -85,6 +85,7 @@ $result = mysqli_stmt_get_result($stmt);
             <th>Asset Number</th>
             <th>Serial Number</th>
             <th>Type</th>
+            <th>Branch</th>
             <th>Department</th>
             <th>Status</th>
             <th>Actions</th>
@@ -97,6 +98,7 @@ $result = mysqli_stmt_get_result($stmt);
                 echo "<td>" . $row['assetnumber'] . "</td>";
                 echo "<td>" . $row['serialnumber'] . "</td>";
                 echo "<td>" . $row['type'] . "</td>";
+                echo "<td>" . $row['branch'] . "</td>";
                 echo "<td>" . $row['department'] . "</td>";
                 echo "<td>" . $row['status'] . "</td>";
                 echo "<td>";
