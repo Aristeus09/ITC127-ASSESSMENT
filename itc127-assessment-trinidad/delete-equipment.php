@@ -14,13 +14,13 @@ if (isset($_GET['assetnumber'])) {
             mysqli_stmt_close($stmt); // Close delete statement
 
             // Log the deletion action
-            $sql = "INSERT INTO tblaccountslogs (datelog, timelog, action, module, performedto, performedby) VALUES (?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO tblequipmentslogs (datelog, timelog, assetnumber, performedby, action, module) VALUES (?, ?, ?, ?, ?, ?)";
             if ($stmt = mysqli_prepare($link, $sql)) {
                 $date = date("d/m/Y");
                 $time = date("h:i:sa");
                 $action = "Delete";
-                $module = "Equipments Management";
-                mysqli_stmt_bind_param($stmt, "ssssss", $date, $time, $action, $module, $assetNumberToDelete, $_SESSION['username']);
+                $module = "Equipments";
+                mysqli_stmt_bind_param($stmt, "ssssss", $date, $time, $assetNumberToDelete, $_SESSION['username'], $action, $module);
                 mysqli_stmt_execute($stmt);
             }
         }
